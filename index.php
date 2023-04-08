@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(isset($_SESSION['login']))
+{
+  header("Location: dashboard.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +20,17 @@
 <body>
 
   <div class="container mt-5 pt-5">
+
+    <div class="row justify-content-center">
+      <div class="col-md-4 text-center">
+        <?php if(isset($_GET['alert']) && $_GET['alert'] === 'gagal') : ?>
+          <div class="alert alert-danger" role="alert">
+           Username / Password Salah !
+          </div>
+        <?php endif; ?>
+      </div>
+    </div>
+
     <div class="row justify-content-center mt-5">
       <div class="col-md-4 text-center">
         <h3>Silahkan Login!</h3>
@@ -20,18 +39,18 @@
 
     <div class="row justify-content-center mt-4">
       <div class="col-md-4">
-        <form action="" method="post">
+        <form action="cek_login.php" method="post">
 
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="username" placeholder="Masukkan username..." name="username" autocomplete="off" autofocus>
+            <input type="text" class="form-control" id="username" placeholder="Masukkan username..." name="username" autocomplete="off" autofocus required>
             <label for="username">Username</label>
           </div>
           <div class="form-floating">
-            <input type="password" class="form-control" id="password" placeholder="Masukkan password..." name="password">
+            <input type="password" class="form-control" id="password" placeholder="Masukkan password..." name="password" required>
             <label for="password">Password</label>
           </div>
           <div class="d-grid gap-2 mt-4">
-            <button class="btn btn-primary" type="button">Masuk</button>
+            <button class="btn btn-primary" type="submit">Masuk</button>
           </div>
 
         </form>
