@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['login'])) {
+  header("Location: index.php");
+  exit;
+}
+
+?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 
@@ -22,8 +30,8 @@
     </button>
     <div class="navbar-nav">
       <div class="nav-item text-nowrap">
-        <a class="nav-link px-3 text-white" href="logout.php">
-          Keluar
+        <a class="nav-link px-3 text-white" onclick="return confirm('Yakin ingin keluar?')" href="logout.php">
+          <?= $_SESSION['nama_user'] ?> anda login sebagai <?= $_SESSION['level'] ?>, Keluar
           <span data-feather="log-out" class="align-text-bottom"></span>
         </a>
       </div>

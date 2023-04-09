@@ -17,21 +17,21 @@ if($check > 0)
   {
     $_SESSION['login'] = true;
     $_SESSION['level'] = 'admin';
-    $_SESSION['user_name'] = $data['nama_user'];
+    $_SESSION['nama_user'] = $data['nama_user'];
     header("Location: dashboard.php");
     exit;
   } elseif($data['level'] === 'kepsek')
   {
     $_SESSION['login'] = true;
     $_SESSION['level'] = 'kepsek';
-    $_SESSION['user_name'] = $data['nama_user'];
+    $_SESSION['nama_user'] = $data['nama_user'];
     header("Location: dashboard.php");
     exit;
   } elseif($data['level'] === 'siswa')
   {
     $_SESSION['login'] = true;
     $_SESSION['level'] = 'siswa';
-    $_SESSION['user_name'] = $data['nama_user'];
+    $_SESSION['nama_user'] = $data['nama_user'];
     header("Location: dashboard.php");
     exit;
   } else 

@@ -1,12 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION['login'])) {
-  header("Location: index.php");
-  exit;
-}
-
-?>
-
 <?php require 'templates/header.php' ?>
 <?php require 'templates/footer.php' ?>
 
