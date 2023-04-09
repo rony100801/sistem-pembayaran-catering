@@ -22,7 +22,10 @@
     </button>
     <div class="navbar-nav">
       <div class="nav-item text-nowrap">
-        <a class="nav-link px-3" href="logout.php">Keluar</a>
+        <a class="nav-link px-3 text-white" href="logout.php">
+          Keluar
+          <span data-feather="log-out" class="align-text-bottom"></span>
+        </a>
       </div>
     </div>
   </header>
