@@ -1,4 +1,4 @@
-<?php 
+<?php
 require 'koneksi.php';
 
 $query = "SELECT * FROM tbl_kelas";
@@ -16,7 +16,7 @@ $result = mysqli_query($koneksi, $query);
 
   <div class="row my-4">
     <div class="col-md-5">
-      <a href="" class="btn btn-success">Tambah Data Kelas</a>
+      <a href="kelas_form_tambah.php" class="btn btn-success">Tambah Data Kelas</a>
     </div>
   </div>
 
@@ -33,7 +33,7 @@ $result = mysqli_query($koneksi, $query);
         </thead>
         <tbody>
           <?php $no = 1; ?>
-          <?php while($data = mysqli_fetch_assoc($result)) : ?>
+          <?php while ($data = mysqli_fetch_assoc($result)) : ?>
             <tr>
               <th scope="row"><?= $no; ?></th>
               <td><?= $data['tingkat_kelas'] ?> <?= $data['nama_kelas'] ?></td>
@@ -42,6 +42,7 @@ $result = mysqli_query($koneksi, $query);
                 <a href="" class="badge text-bg-danger text-decoration-none">Hapus</a>
               </td>
             </tr>
+            <?php $no++; ?>
           <?php endwhile; ?>
         </tbody>
       </table>
