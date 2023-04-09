@@ -13,11 +13,33 @@ if($check > 0)
 {
   $data = mysqli_fetch_assoc($result);
 
-  $_SESSION['login'] = true;
-  $_SESSION['level'] = 'admin';
-  $_SESSION['user_name'] = $data['nama_user'];
-  header("Location: dashboard.php");
-  exit;
+  if($data['level'] === 'admin') 
+  {
+    $_SESSION['login'] = true;
+    $_SESSION['level'] = 'admin';
+    $_SESSION['user_name'] = $data['nama_user'];
+    header("Location: dashboard.php");
+    exit;
+  } elseif($data['level'] === 'kepsek')
+  {
+    $_SESSION['login'] = true;
+    $_SESSION['level'] = 'kepsek';
+    $_SESSION['user_name'] = $data['nama_user'];
+    header("Location: dashboard.php");
+    exit;
+  } elseif($data['level'] === 'siswa')
+  {
+    $_SESSION['login'] = true;
+    $_SESSION['level'] = 'siswa';
+    $_SESSION['user_name'] = $data['nama_user'];
+    header("Location: dashboard.php");
+    exit;
+  } else 
+  {
+    header("Location: index.php?alert=gagal");
+    exit;
+  }
+  
 } else {
   header("Location: index.php?alert=gagal");
   exit;
