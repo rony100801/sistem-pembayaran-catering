@@ -43,36 +43,36 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file" class="align-text-bottom"></span>
+              <a class="nav-link" href="kelas.php">
+                <span data-feather="file-plus" class="align-text-bottom"></span>
                 Data Kelas
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file" class="align-text-bottom"></span>
+              <a class="nav-link" href="siswa.php">
+                <span data-feather="file-plus" class="align-text-bottom"></span>
                 Data Siswa
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file" class="align-text-bottom"></span>
+              <a class="nav-link" href="users.php">
+                <span data-feather="users" class="align-text-bottom"></span>
                 Data Users
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file" class="align-text-bottom"></span>
+              <a class="nav-link" href="transaksi.php">
+                <span data-feather="dollar-sign" class="align-text-bottom"></span>
                 Transaksi
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file" class="align-text-bottom"></span>
+              <a class="nav-link" href="laporan.php">
+                <span data-feather="archive" class="align-text-bottom"></span>
                 Laporan
               </a>
             </li>
