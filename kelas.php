@@ -39,7 +39,7 @@ $result = mysqli_query($koneksi, $query);
               <td><?= $data['tingkat_kelas'] ?> <?= $data['nama_kelas'] ?></td>
               <td>
                 <a href="" class="badge text-bg-primary text-decoration-none">Edit</a>
-                <a href="" class="badge text-bg-danger text-decoration-none">Hapus</a>
+                <a href="kelas_proses_hapus.php?id_kelas=<?= $data['id_kelas'] ?>" class="badge text-bg-danger text-decoration-none" onclick="return confirm('Yakin ingin dihapus?')">Hapus</a>
               </td>
             </tr>
             <?php $no++; ?>
