@@ -47,7 +47,7 @@ if (!isset($_SESSION['login'])) {
           <ul class="nav flex-column">
 
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+              <a class="nav-link active" aria-current="page" href="dashboard.php">
                 <span data-feather="home" class="align-text-bottom"></span>
                 Dashboard
               </a>
