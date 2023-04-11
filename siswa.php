@@ -42,7 +42,7 @@ $result = mysqli_query($koneksi, $query);
               <th scope="row"><?= $no; ?></th>
               <td><?= $data['nis'] ?></td>
               <td><?= $data['nama_siswa'] ?></td>
-              <td><?= $data['nama_kelas'] ?></td>
+              <td><?= $data['tingkat_kelas'] ?> <?= $data['nama_kelas'] ?></td>
               <td style="width: 25%;"><?= $data['alamat_siswa'] ?></td>
               <td><?= $data['no_hp_siswa'] ?></td>
               <td>
