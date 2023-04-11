@@ -46,8 +46,8 @@ $result = mysqli_query($koneksi, $query);
               <td style="width: 25%;"><?= $data['alamat_siswa'] ?></td>
               <td><?= $data['no_hp_siswa'] ?></td>
               <td>
-                <a href="siswa_form_ubah.php?id_kelas=<?= $data['id_kelas'] ?>" class="badge text-bg-primary text-decoration-none">Ubah</a>
-                <a href="siswa_proses_hapus.php?id_kelas=<?= $data['id_kelas'] ?>" class="badge text-bg-danger text-decoration-none" onclick="return confirm('Yakin ingin dihapus?')">Hapus</a>
+                <a href="siswa_form_ubah.php?nis=<?= $data['nis'] ?>" class="badge text-bg-primary text-decoration-none">Ubah</a>
+                <a href="siswa_proses_hapus.php?nis=<?= $data['nis'] ?>" class="badge text-bg-danger text-decoration-none" onclick="return confirm('Yakin ingin dihapus?')">Hapus</a>
               </td>
             </tr>
             <?php $no++; ?>
